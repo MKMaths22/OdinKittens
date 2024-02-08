@@ -34,7 +34,7 @@ response = RestClient.get("http://localhost:3000/kittens")
 2. Let’s see what we got back:  
 
 response.body #=> Should return a sloppy mess of HTML.  
-# alternatively, you can do this:
+alternatively, you can do this:
 response.to_s  
 
 If you check out your server output, it’s probably processing as */* (i.e. all media types), e.g. Processing by KittensController#index as */*
