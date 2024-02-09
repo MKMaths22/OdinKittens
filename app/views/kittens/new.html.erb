@@ -1,20 +1,3 @@
 This page is for adding a new Kitten to the database:
 
-<%= form_with model: @kitten do |form| %>
-  <%= form.label :name, 'Name' %>
-  <%= form.text_field :name %>
-  <br>
-  <%= form.label :age, 'Age in years' %>
-  <%= form.number_field :age %>
-  <% if @kitten.errors.size.zero? %>
-    <br>
-  <% end %>
-  <%= form.label :cuteness, 'Choose cuteness' %>
-  <%= form.select :cuteness, options_for_select(Kitten.cuteness_values, @kitten.cuteness) %>
-  <br>
-  <%= form.label :softness, 'Choose softness' %>
-  <%= form.select :softness, options_for_select(Kitten.softness_values, @kitten.softness) %>
-  <br>
-  <%= form.submit 'Add this Kitten' %>
-
-<% end %>
+<%= render 'form_new_edit', button_message: 'Add this new Kitty' %>

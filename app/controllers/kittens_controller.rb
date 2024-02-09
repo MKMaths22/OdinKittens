@@ -26,9 +26,11 @@ class KittensController < ApplicationController
   end
 
   def update
+    @kitten = Kitten.find(params[:id])
     if @kitten.update(allowed_params)
       redirect_to kitten_path(id: @kitten.id)
     else
+      flash.now[:alert] = "This kitten's details cannot be updated."
       render 'edit', status: :unprocessable_entity
     end
   end

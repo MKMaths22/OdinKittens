@@ -1,0 +1,18 @@
+<%= form_with model: @kitten do |form| %>
+  <%= form.label :name, 'Name' %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :age, 'Age in years' %>
+  <%= form.number_field :age %>
+  <% if @kitten.errors.size.zero? %>
+    <br>
+  <% end %>
+  <%= form.label :cuteness, 'Choose cuteness' %>
+  <%= form.select :cuteness, options_for_select(Kitten.cuteness_values, @kitten.cuteness) %>
+  <br>
+  <%= form.label :softness, 'Choose softness' %>
+  <%= form.select :softness, options_for_select(Kitten.softness_values, @kitten.softness) %>
+  <br>
+  <%= form.submit button_message %>
+
+<% end %>
