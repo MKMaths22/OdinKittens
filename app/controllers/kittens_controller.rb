@@ -16,6 +16,7 @@ class KittensController < ApplicationController
     if @kitten.save
       redirect_to kitten_path(id: @kitten.id)
     else
+      flash.now[:alert] = 'This kitten cannot be added.'
       render 'new', status: :unprocessable_entity
     end
   end
@@ -41,6 +42,6 @@ class KittensController < ApplicationController
   private
 
   def allowed_params
-    params.require(kitten).permit(:name, :age, :cuteness, :softness)
+    params.require(:kitten).permit(:name, :age, :cuteness, :softness)
   end
 end

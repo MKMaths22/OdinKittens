@@ -6,11 +6,15 @@ This page is for adding a new Kitten to the database:
   <br>
   <%= form.label :age, 'Age in years' %>
   <%= form.number_field :age %>
-  <br>
+  <% if @kitten.errors.size.zero? %>
+    <br>
+  <% end %>
   <%= form.label :cuteness, 'Choose cuteness' %>
   <%= form.select :cuteness, options_for_select(Kitten.cuteness_values, @kitten.cuteness) %>
+  <br>
   <%= form.label :softness, 'Choose softness' %>
   <%= form.select :softness, options_for_select(Kitten.softness_values, @kitten.softness) %>
+  <br>
   <%= form.submit 'Add this Kitten' %>
 
 <% end %>
