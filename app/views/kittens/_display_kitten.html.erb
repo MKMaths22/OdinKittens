@@ -14,4 +14,6 @@ Softness:
 Cuteness:
 <%= cat.cuteness %>
 <br>
+<%= link_to 'Delete', kitten_path(id: cat.id), data: { turbo_method: :delete } %>
+<br>
 <br>

@@ -2,3 +2,4 @@ This page is for editing the details the Kitten with id
 <%= @kitten.id %>
 
 <%= render 'form_new_edit', button_message: 'Update this Kitten' %>
+<%= link_to 'Delete', kitten_path, data: { turbo_method: :delete } %>
