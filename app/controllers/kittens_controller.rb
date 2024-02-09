@@ -38,7 +38,7 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
-    redirect_to 'root'
+    redirect_to root_path
   end
 
   private
