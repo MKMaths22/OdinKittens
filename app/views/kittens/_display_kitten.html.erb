@@ -6,7 +6,12 @@ Their name is
 <br>
 and they are
 <%= cat.age %>
-years old.
+<% if cat.age == 1 %> 
+  year
+<% else %>
+  years
+<% end %>
+old.
 <br>
 Softness:
 <%= cat.softness %>
