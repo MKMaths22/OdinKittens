@@ -9,4 +9,8 @@ This page is for adding a new Kitten to the database:
   <br>
   <%= form.label :cuteness, 'Choose cuteness' %>
   <%= form.select :cuteness, options_for_select(Kitten.cuteness_values, @kitten.cuteness) %>
+  <%= form.label :softness, 'Choose softness' %>
+  <%= form.select :softness, options_for_select(Kitten.softness_values, @kitten.softness) %>
+  <%= form.submit 'Add this Kitten' %>
+
 <% end %>

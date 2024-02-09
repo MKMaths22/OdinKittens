@@ -11,4 +11,6 @@ class Kitten < ApplicationRecord
   
   validates :cuteness, :inclusion => cuteness_values
   validates :softness, :inclusion => softness_values
+  validates :age, :numericality => { :greater_than_or_equal_to => 0 }
+
 end
