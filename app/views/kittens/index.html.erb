@@ -1,3 +1,6 @@
 <% @kittens.each do |cat| %>
   <%= render 'display_kitten', cat: cat %>
 <% end %>
+<% unless @kittens.any? %>
+There are no Kittens to display.
+<% end %>
