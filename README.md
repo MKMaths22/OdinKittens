@@ -2,6 +2,9 @@
 
 This project follows the instructions for The Odin Project 'Kittens API', at https://www.theodinproject.com/lessons/ruby-on-rails-kittens-api
 
+Uses Ruby version 3.1.2p20 and Rails 7.1.3. To set up the database, it is necessary to run rails db:seed so you start off with some kittens.
+As an extra feature, I have made the cuteness and softness values be restricted to a list of three options in each case, which are defined as class methods in the Kitten model and referenced from the relevant view. I got this idea from konyak's answer on Stack Overflow: https://stackoverflow.com/questions/14113057/how-to-have-a-drop-down-select-field-in-a-rails-form
+
 ------------------
 
 **Building a kittens API**
@@ -57,26 +60,3 @@ puts json_response.body
 Now you’ve got a website that is both a normal HTML-producing back end AND an API that can be used to pull data from it. You could use JavaScript calls from the front end to dynamically refresh your data now or even to load the whole page in the first place. Or maybe you’ll be hooking up a Kittens app to your iPhone and need a back end. It doesn’t matter, since now you’ve got a RESTful API.
 
 ---------------------  
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
