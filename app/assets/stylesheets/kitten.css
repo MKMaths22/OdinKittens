@@ -14,11 +14,14 @@
 
 .linksbar > * {
   height: 30px;
+  padding: 5px;
+  padding-bottom: 2px;
   font-size: 20px;
   font-weight: bold;
   color: white;
   border: 2px solid black;
-  background-color: green;
+  border-radius: 5px;
+  background-color: rgb(100,100,50);
 }
 
 .field_with_errors {
